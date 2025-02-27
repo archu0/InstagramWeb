@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 30px;
+  }
+
+
+  
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
+  
