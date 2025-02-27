@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookM5</title>
+    <style>
+        /* CSS Styles */
+     
+body{
+        width: 100%;
+        overflow-x: hidden;
+        
+    }
+       
+    *{
+        margin: 0;
+        
+    }
+    main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+    }
+
+
+        nav {
+            font-size: 20px;
+            height: 80px;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+        }
+
+        nav .cook {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        nav button {
+            font-size: 16px;
+            border-radius: 4px;
+            background-color: #ff6347;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #ff4500;
+        }
+
+
+
+        .img {
+    height: 700px;
+    width: 100%;
+    background-image: url("Kitchen1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    
+        
+    }
+        h1,h5
+        {
+        position: relative;
+            top: 200px;
+            left: 100px;
+        }
+
+    
+
+    .button1
+    { 
+        font-size: 24px;
+        padding: 10px 40px 10px 40px;
+        position: relative;
+        top: 200px;
+            left:  100px;
+        
+
+    }
+    
+    .m1 {
+    height: 400px;
+    margin: 10px;
+    width: 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top center, top left, top right;
+    background-image: url(kitchentool.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: 400px 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.m2 {
+    height: 400px;
+    margin: 10px;
+    width: 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top center, top left, top right;
+    background-image: url(kitchenutsensils.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: 400px 400px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.m3 {
+    height: 400px;
+    margin: 10px;
+    width: 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top center, top left, top right;
+    background-image: url(cutleryset.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: 400px 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.m1 h2, .m2 h2, .m3 h2, .button2, .button3, .button4 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.m1 h2, .m2 h2, .m3 h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    color: white;
+}
+
+.button2, .button3, .button4 {
+    padding: 10px;
+    background-color: yellow;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.m1:hover h2, .m1:hover .button2, .m2:hover h2, .m2:hover .button3, .m3:hover h2, .m3:hover .button4 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.m1:hover, .m2:hover, .m3:hover {
+        opacity: 0.5;
+    }
+
+.m4 
+    {
+        
+           top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url(Kitchentool1.jpg);
+           display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m4 h5{
+    left: 20px;
+    color: red;
+    position: relative;
+    top: 30px;
+}
+
+    
+
+.m5
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url(cutleryset2.jpg);
+           display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m5 h5{
+    color: red;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+.m6 
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url(kettle.jpg);
+             display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m6 h5{
+    left: 20px;
+    top: 30px;
+    color: red;
+    position: relative;
+
+
+
+}
+.m7 
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url(electircooker.png);
+             display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m7 h5{
+    color: red;
+    position: relative;
+    top: 30px;
+    left: 20px;
+
+}
+
+
+.img1 {
+    height: 600px;
+    width: 100%;
+    background-image: url("outlet.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    position: relative;
+    top: 40px;
+    
+
+}
+.img1 h1{
+    position: relative;
+    left: 400px;
+    top: 150px;
+}
+.img1 h5{
+    position: relative;
+    left: 400px;
+    top: 120px;
+}
+.button7
+    {
+        position: relative;
+        top: 120px;
+            left:  600px;
+            padding: 10px;
+    }
+
+    .img2 {
+        position: relative;
+        top: 20px;
+    height: 700px;
+    width: 100%;
+    background-image: url("cooking.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+        
+    }
+       
+
+    
+    .button8
+    {
+        position: relative;
+        top: 200px;
+            left:  100px;
+        
+
+    }
+    .sub  {
+        top: 0;
+        background-color: rgb(29, 10, 10);
+        height: 450px;
+        width: 100%;
+       
+    }
+
+    input
+    {
+        padding: 20px 200px 20px 30px;
+        border-radius: 30px;
+        position: relative;
+           top: 85px;
+            left:  430px;
+    
+        }
+        .ins{
+    background-color: gray;
+        
+    }
+    .ins1 
+    {
+           height: 400px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("inner1.jpg");
+            border-radius: 10px;
+            background-size: 100% 100%;
+        }
+
+    
+
+.ins2 
+    {
+           height: 400px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("inner2.jpg");
+            border-radius: 10px;
+            background-size: 400px 400px;
+
+        
+    }
+    .ins3 
+    {
+           height: 400px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("inner3.jpg");
+             display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 400px 400px;
+
+    }
+    .ques {
+        position: relative;
+        top: 40px;;
+    height: 700px;
+    width: 100%;
+    background-image: url("Kitchen1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    
+    }
+
+    table{
+    height: 100px;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    width: 990px;
+
+
+}
+tr,td
+{
+    border-bottom: 1px solid gray;
+    padding: 20px;
+
+}
+.Last
+{
+    background-color: white;
+    height: 400px;
+    width: 100%;
+    color: black;
+    position: relative;
+    top: -40px;
+
+}
+
+.end{
+    bottom: 0;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    color: white;
+    position: relative;
+
+}
+i{
+
+    position: relative;
+    top: 30px;
+    left: 300px;
+    
+
+}
+.head{
+background-color: gray;
+position: relative;
+
+}
+header{
+position: relative;
+left: 500px;
+top : 7px;
+bottom: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+
+}
+.interior{
+    position: relative;
+    border-radius: 10px;
+    height: 500px;
+    width: 100%;
+    background-image: url("inner4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+
+}
+.inner{
+background-color: gray;
+border: 20px solid gray;
+
+}
+
+
+
+.m10 
+    {
+        
+           top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("peeler.jpg");
+           display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m10 h5{
+    left: 20px;
+    color: red;
+    position: relative;
+    top: 30px;
+}
+
+    
+
+.m11
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("board.jpg");
+           display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m11 h5{
+    color: red;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+.m12 
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("spoons.jpg");
+             display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m12 h5{
+    left: 20px;
+    top: 30px;
+    color: red;
+    position: relative;
+
+
+
+}
+.m13 
+    {
+        top: 20px;
+           height: 300px;
+            margin: 10px;
+            width: 100%;
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top center,top left,top right;
+           background-image: url("mixer.jpg");
+             display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            background-size: 300px 300px;
+
+        
+    }
+
+.m13 h5{
+    color: red;
+    position: relative;
+    top: 30px;
+left: -5px;
+
+}
+section{
+    background-image: url("Cart.jpg");
+    position: relative;
+    top: 70px;
+    left: 380px;
+    height: 80px;
+    width: 80px;
+    background-size: 100% 100%;
+
+}
+
+.details{
+    background-image: url("qrcode.png");
+    position: relative;
+    top:50px;
+    left: 120px;
+    height: 200px;
+    width: 200px;
+    background-size: 100% 100%;
+
+}
+.m1, .m2, .m3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.m1 h2, .m1 .button2, .m2 h2, .m2 .button3, .m3 h2, .m3 .button4 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.m1 h2, .m2 h2, .m3 h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.m1 .button2, .m2 .button3, .m3 .button4 {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.m1:hover h2, .m1:hover .button2, .m2:hover h2, .m2:hover .button3, .m3:hover h2, .m3:hover .button4 {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="cook"> <a href="Template.html">CookM5</a> </div>
+        <div>
+            <a href="http://play.google.com/store/apps/details?id=luxgenic.mycookwareshop&hl=en_ZA">Mobile App</a>
+        </div>
+        <div>
+            <a href="Appliances.html">Appliances</a>
+        </div>
+        <div>
+            <a href="Order Food.html">Order Food</a>
+        </div>
+        <div>
+            <a href="About us.html">About Us</a>
+        </div>
+        <button>Download App</button>
+    </nav>
+    <div class="img">
+
+        <h1 style="font-size: 40px" >NEAT AND CLEAN KITCHEN</h1>
+            <br>
+    <h5 style="font-size: 30px;">It is also very easy to use an element of a medical plan.</h5>
+    <br>
+    <h5 style="font-size: 30px ;"> He needs a bow, but it will be pursued. </h5>
+    <br>
+    <button class="button1" style="font-size: 30px; ">SHOP NOW</button>
+    </div>
+
+    <main>
+        
+        <div class="m1">
+      
+        <h2 class="h2">Kitchen Tools</h2>
+        <br>
+    <button class="button2" style="font-size: 15px;">SHOP NOW</button>
+    </div>
+    <div class="m2">
+        <h2 class="h2">Cooking Utensils</h2>
+        <br>
+        <button class="button3" style="font-size: 15px;">SHOP NOW</button>
+    </div>
+    <div class="m3">
+        <h2 class="h2">Cutlery Set</h2>
+        <br>
+        <button class="button4" style="font-size: 15px;">SHOP NOW</button>
+    </div>
+        </main>
+        
+        <div style="padding-top: 30px;">
+            <strong style=" margin-left: 550px; font-size: 30px;">
+            NEW ARRIVALS
+        </div>
+
+
+        <main style="height: 300px;">
+            <div class="m4">
+            <h5 class="h5">Kitchen Tools</h5>
+            <br>
+        <p style="position: relative; top: 70px; right: 180px; font-size: 25px; color: yellowgreen;">$30.00</p>
+        </div>
+        <div class="m5">
+            <h5 class="h5">Cutlery Set</h5>
+            <br>
+            <p style="position: relative; top: 70px; right: 165px; font-size: 25px; color: yellowgreen;">$50.00</p>
+        </div>
+        <div class="m6">
+            <h5 class="h5">Water Bolier</h5>
+            <br>
+            <p style="position: relative; top: 70px; right: 165px; font-size: 25px; color: yellowgreen;">$100.00</p>
+            </div>
+            <div class="m7">
+                <h5 class="h5"> Electric Heater</h5>
+                <br>
+                <p style="position: relative; top: 70px; right: 170px; font-size: 25px; color: yellowgreen;">$350.00</p>
+        </div>
+        </main>
+        <div class="img1">
+
+            <h1 style="font-size: 40px" >NEAT AND CLEAN KITCHEN<h1>
+                <br>
+        <h5 style="font-size: 30px;">It is also very easy to use an element of a medical plan.</h5>
+        <br>
+        <h5 style="font-size: 30px ;"> He needs a bow, but it will be pursued. </h5>
+        <br>
+        <button class="button7" style="font-size: 30px; ">SHOP NOW</button>
+    </div>
+
+    <div style="padding-top: 30px;">
+        <strong style=" margin-left: 550px; font-size: 30px;">
+        BEST SELLER
+    </div>
+    <main style="height: 300px;">
+        <div class="m10">
+        <h5 class="h5">Vegeable pealer</h5>
+        <br>
+    <p style="position: relative; top: 70px; right: 180px; font-size: 25px; color: yellowgreen;">$30.00</p>
+    </div>
+    <div class="m11">
+        <h5 class="h5">Wooden Cutting Board</h5>
+        <br>
+        <p style="position: relative; top: 70px; right: 165px; font-size: 25px; color: yellowgreen;">$150.00</p>
+    </div>
+    <div class="m12">
+        <h5 class="h5">Wooden Spoons</h5>
+        <br>
+        <p style="position: relative; top: 70px; right: 165px; font-size: 25px; color: yellowgreen;">$130.00</p>
+        </div>
+        <div class="m13">
+            <h5 class="h5">Mixer</h5>
+            <br>
+            <p style="position: relative; top: 70px; right: 170px; font-size: 25px; color: yellowgreen;">$450.00</p>
+    </div>
+    </main>
+
+
+    <div class="img2">
+
+        <h1 style="font-size: 50px" >Solutions For The Kitchen<h1>
+            <br>
+    <h5 style="font-size: 30px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, ipsum.</h5>
+    <br>
+    <button class="button8" style="font-size: 30px; ">SHOP NOW</button>
+</div>
+<div class="sub">
+    <h2 style="color: white; position: relative; left: 550px;  top: 70px">SIGN UP</h2>
+    <br>
+    <h2 style="color: white; position: relative; left: 480px;  top: 70px">NEWSLETTER</h2>
+    <br>
+    <h5 style="color: white; position: relative; left: 300px;  top: 70px;">Subscribe to the weekly news letter for all the latest updates</h5>
+    <br>
+    <input type="text"  placeholder="Your Email Address" >
+</div>
+<div class="head">
+    <header>MENTAGE ON INSTAGRAM</header>
+</div>
+<main class="ins">
+    <div class="ins1"></div>
+    <div class="ins2"></div>
+    <div class="ins3"></div>
+</main>
+<div class="inner">
+<div class="interior">
+</div>
+</div>
+<div class="ques">
+    <strong style="position: relative; left: 450px; top: 30px; ">FREQUENTLY ASKED QUESTIONS</strong>
+    <br>
+    <table bgcolor="white">
+        <tr>
+            <td>Is the cook M5 app free?</td> 
+        </tr>
+
+        <tr>
+            <td>Do you need to have a smart appliances to use Cookm5?</td> 
+        
+            </tr>
+    
+        <tr>
+            <td>How do I connect my Appliances in the app?</td> 
+            
+        </tr>
+        <tr>
+            <td>Is the CookM5 app available on desktop?</td> 
+            
+        </tr>
+        <tr>
+            <td>What is a smart recipe?</td> 
+        
+        </tr>
+
+    </table>
+
+</div>
+<div class="Last"> 
+<section></section>
+<img class="details">
+    <h3 style="position: relative; top: -220px; left: 500px; ">Kitchen supplies and wares</h3>
+    <br><h6 style="position: relative; left: 500px; font-size: 30px; top: -240px; ">Leo with fringe is ullamcorper.</h6>
+    <p style="font-size: 20px; position: relative; top: -220px; left: 500px;">Let it be a great mourning bed. <br>Odio euismod lacinia at quis risus sed vulputate</p>
+    <br>
+        <button style="font-size: 30px; position: relative;  top: -230px; left: 500px;padding: 10px 120px 10px 120px;border-radius: 20px;background-color: black;color: white;">Download Now</button>
+        <br>
+        <button style="font-size: 30px; position: relative;  top: -210px; left: 500px;padding: 10px 80px 10px 80px;border-radius: 20px;background-color: black;color: white;">Get It On Google Play</button>
+
+</div>
+
+
+<div class="end"><i>© Copyright 2022 Mobirise - All Rights Reserved</i>
+</div>
+
+
+    
+</body>
+</html>
